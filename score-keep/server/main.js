@@ -1,5 +1,16 @@
-// import './../imports/utils.js';
-import {greetUser} from './../imports/utils.js';
+import {Meteor} from 'meteor/meteor';
+import {Players} from './../imports/api/players';
 
-console.log('Log from /server/main.js');
-console.log(greetUser("Matt"));
+/* Notes
+ * Meteor startup is the same on both client and server!
+ * Runs when server process/DOM ready on server/client respectively
+ * Meteor/MongoDB is synchronous
+ */
+
+Meteor.startup(function() {
+  Players.insert({
+    name: 'Matt',
+    score: '42'
+  });
+  console.log(Players.find().fetch());
+});
