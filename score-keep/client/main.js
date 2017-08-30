@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 import {Players} from './../imports/api/players';
+import TitleBar from './../imports/ui/TitleBar';
+import AddPlayer from './../imports/ui/AddPlayer';
 
 /* Notes
  * JSX should only return 1 root element
@@ -54,14 +56,13 @@ Meteor.startup(() => {
     let name = 'Matt';
     let jsx = (
       <div>
-        <h1>{title}</h1>
-        <p>Hello {name}!</p>
-        <p>Second Paragraph</p>
+        <TitleBar title={title} subtitle="Created by Matt"/>
         {renderPlayers(players)}
         <form onSubmit={handleSubmit}>
           <input type="text" name="playerName" placeholder="Player name"/>
           <button>Add Player</button>
         </form>
+        <AddPlayer />
       </div>
     );
     ReactDOM.render(jsx, document.getElementById('app'));
