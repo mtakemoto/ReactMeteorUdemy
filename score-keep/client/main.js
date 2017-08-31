@@ -2,24 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
+
 import {Players} from './../imports/api/players';
 import TitleBar from './../imports/ui/TitleBar';
 import AddPlayer from './../imports/ui/AddPlayer';
-import Player from './../imports/ui/Player';
+import PlayerList from './../imports/ui/PlayerList';
 
 /* Notes
  * JSX should only return 1 root element
  */
-
-/* renderPlayers
- * Mongo has a shortcut for passing db id strings w/o using object
- * syntax
- */
-const renderPlayers = (playersList) => {
-  return playersList.map((player) => {
-    return <Player key={player._id} player={player} />;
-  });
-};
 
 Meteor.startup(() => {
   Tracker.autorun(() => {
@@ -29,7 +20,7 @@ Meteor.startup(() => {
     let jsx = (
       <div>
         <TitleBar title={title} subtitle="Created by Matt"/>
-        {renderPlayers(players)}
+        <PlayerList players={players}/>
         <AddPlayer />
       </div>
     );
