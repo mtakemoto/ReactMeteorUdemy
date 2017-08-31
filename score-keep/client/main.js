@@ -31,24 +31,6 @@ const renderPlayers = (playersList) => {
   });
 };
 
-const insertPlayer = function(playerName) {
-  Players.insert({
-    name: playerName,
-    score: 0
-  });
-}
-
-//By default, submit does full-page refresh.  Need onSubmit listener
-//Target is the form
-const handleSubmit = function(e) {
-  let playerName = e.target.playerName.value;
-  e.preventDefault();
-  if(playerName) {
-    e.target.playerName.value = '';
-    insertPlayer(playerName);
-  }
-};
-
 Meteor.startup(() => {
   Tracker.autorun(() => {
     let players = Players.find().fetch();
@@ -58,10 +40,7 @@ Meteor.startup(() => {
       <div>
         <TitleBar title={title} subtitle="Created by Matt"/>
         {renderPlayers(players)}
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="playerName" placeholder="Player name"/>
-          <button>Add Player</button>
-        </form>
+
         <AddPlayer />
       </div>
     );
