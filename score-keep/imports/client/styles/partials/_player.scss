@@ -1,0 +1,18 @@
+.player {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.player__name {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.player__stats {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-seight: 300;
+}
+.player__actions {
+  //Don't shrink in case of long name
+  flex-shrink: 0;
+}
