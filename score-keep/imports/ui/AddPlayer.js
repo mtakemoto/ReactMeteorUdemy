@@ -19,9 +19,7 @@ export default class AddPlayer extends React.Component {
     }
   }
 
-  /* Notes
-   * Need to bind this to access props in custom functions
-   */
+  // Need to bind this to access props in custom functions
   render() {
     return (
       <div className="item">
