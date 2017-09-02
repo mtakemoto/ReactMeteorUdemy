@@ -6,11 +6,11 @@ Learning more about full-stack development by using Meteor, React and MongoDB by
 Add a player and keep track of their score.  Data is persistent by using MiniMongo/MongoDB on the client and server side respectively.  Uses fourseven/meteor-scss for SASS compilation and react-flip-move for smooth transitions when the ladder position of a player changes.
 
 My planned additions to the project:
-- Point/points phrasing logic
-- Global increment score (by 5, 10...etc)
-- Gradient top bar
-- Favicon
-- Animation upon reaching score goal
+- [ ] Point/points phrasing logic
+- [ ] Global increment score (by 5, 10...etc)
+- [ ] Gradient top bar
+- [ ] Favicon
+- [ ] Animation upon reaching score goal
 
 ## Short link
 - To do
