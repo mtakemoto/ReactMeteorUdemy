@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 export default class Player extends React.Component {
   render() {
     let p = this.props;
+    let itemClassName = `item item--position-${p.player.rank}`;
     return (
-       <div key={p.player._id} className="item">
+       <div key={p.player._id} className={itemClassName}>
          <div className="player">
            <div>
              <h3 className="player__name">{p.player.name}</h3>
              <p className="player__stats">
-                {p.player.rank} {p.player.position} {p.player.score} point(s).
+                {p.player.rank} place - {p.player.position} {p.player.score} point(s).
              </p>
            </div>
 

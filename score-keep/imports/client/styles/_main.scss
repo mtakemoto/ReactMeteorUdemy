@@ -1,3 +1,10 @@
+$red: #eddfdf;
+$green: #e4ede0;
+$blue: #dfe7ed;
+$red-alt: darken($red, 15%);
+$green-alt: darken($green, 15%);
+$blue-alt: darken($blue, 15%);
+
 * {
   margin: 0;
   padding: 0;

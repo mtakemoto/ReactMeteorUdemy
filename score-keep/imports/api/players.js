@@ -17,6 +17,7 @@ export const calculatePlayerPositions = (players) => {
 
     return {
       ...player,
+      rank,
       position: numeral(rank).format('0o')
     }
   });
