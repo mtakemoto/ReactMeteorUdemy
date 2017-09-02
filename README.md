@@ -1,4 +1,4 @@
-# ReactMeteorUdemy
+# Udemy React.js & Meteor Course Projects
 Learning more about full-stack development by using Meteor, React and MongoDB by to create fully-featured web apps via the course at https://www.udemy.com/meteor-react by Andrew Mead.  I also plan to add my own features to these projects to make them fun and even more useful.   
 
 # Projects
