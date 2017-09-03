@@ -13,7 +13,7 @@ My planned additions to the project:
 - [ ] Animation upon reaching score goal
 
 ## Short link
-- To do
+Short linking service that implements user accounts, authentication, client-side routing and modals.  
 
 ## Notes app
 - To do
